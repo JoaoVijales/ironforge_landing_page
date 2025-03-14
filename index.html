@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IronForge Fitness</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/menu.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/benefits.css">
+        <link rel="stylesheet" href="./css/gym.css">
+        <link rel="stylesheet" href="./css/plans.css">
+        <link rel="stylesheet" href="./css/modal.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@500;700&family=Lato:wght@400;700&display=swap">
+    <body>
+        <!-- Menu -->
+        <nav>
+            <div class="logo"></div>
+            <ul>
+                <li><a href="#benefits">Benefícios</a></li>
+                <li><a href="#gym">Unidades</a></li>
+                <li><a href="#planos">Planos</a></li>
+            </ul>
+        </nav>
+        <!-- Header Hero -->
+        <header class="header">
+
+            <div>
+                <h1>Transforme seu corpo em 90 dias</h1>
+                <p>Experimente por 7 dias grátis</p>
+                <button class="cta-button" onclick="openModal()">Comece Agora!</button>
+            </div>
+        </header>
+        <!-- Seção Benefícios -->
+        <section id="benefits" class="unique-benefits">
+            <h2>O Que Só a IronForge Oferece</h2>
+            <div class="benefits-container">
+                <div class="benefit-item">
+                    <div class="benefit-icon icon-progress"></div>
+                    <h3 class="subtitle">Programa de Evolução Contínua</h3>
+                    <p>Reavaliação corporal mensal com ajuste de treinos por inteligência artificial</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon icon-diet"></div>
+                    <h3 class="subtitle">Nutrição Integrada</h3>
+                    <p>Plano alimentar personalizado com acompanhamento semanal</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon icon-app"></div>
+                    <h3 class="subtitle">App Exclusivo</h3>
+                    <p>Controle seus treinos, agende aulas e acompanhe resultados</p>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Acedemias da Rede -->
+        <section id="gym" class="gym-network">
+            <h2>Nossas Unidades</h2>
+            <div class="gym-grid">
+                <div class="gym-card">
+                    <img src="./img/moema2.jpg" alt="IronForge Moema" class="gym-image">
+                    <a class="gym-image-credit" href="https://www.freepik.com/free-photo/gym-with-indoor-cycling-equipment_22632034.htm">Image by freepik</a>
+                    <div class="gym-info">
+                        <h3>Moema</h3>
+                        <p>Av. das Nações Unidas, 1500</p>
+                        <p>24h • Estacionamento Gratuito</p>
+                        <button onclick="openWhatsApp()">Agendar Visita</button>
+                    </div>
+                </div>
+                <div class="gym-card">
+                    <img src="./img/moema.jpg" alt="IronForge Moema" class="gym-image">
+                    <a class="gym-image-credit" href="https://www.freepik.com/free-photo/gym-with-indoor-cycling-equipment_22632033.htm">Image by freepik</a>
+                    <div class="gym-info">
+                        <h3>Moema</h3>
+                        <p>Av. das Nações Unidas, 1500</p>
+                        <p>24h • Estacionamento Gratuito</p>
+                        <button onclick="openWhatsApp()">Agendar Visita</button>
+                    </div>
+                </div>
+                <!-- Adicione mais unidades -->
+            </div>
+        </section>
+        <!-- Seção Planos -->
+        <section id="planos" class="plans">
+            <div class="plans-container">
+                <div class="plans-card">
+                    <h3>Plano Bronze</h3>
+                    <p class="coast">R$ 89,90/mês</p>
+                    <ul>
+                        <li>Área de musculação</li>9
+                    </ul>
+                    <button class="cta-button" onclick="openModal()">Escolher</button>
+                </div>
+                <div class="plans-card decorate">
+                    <h3>Plano prata</h3>
+                    <p class="coast">R$ 99,90/mês</p>
+                    <ul>
+                        <li>Área de musculação</li>
+                        <li>Aulas de ginástica</li>
+                        <li>Plano alimentar</li>
+                    </ul>
+                    <button class="cta-button dcorete-button" onclick="openModal()">Escolher</button>
+                </div>
+                <div class="plans-card">
+                    <h3>Plano ouro</h3>
+                    <p class="coast">R$ 139,90/mês</p>
+                    <ul>
+                        <li>Acesso a todas as unidades</li>
+                        <li>Área de musculação</li>
+                        <li>Aulas de ginástica</li>
+                        <li>Plano alimentar</li>
+                    </ul>
+                    <button class="cta-button" onclick="openModal()">Escolher</button>
+                </div>
+                <!-- Adicionar mais planos -->
+            </div>
+        </section>
+        <!-- WhatsApp Float -->
+        <div class="whatsapp-float" onclick="openWhatsApp()">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+            <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                    <span class="close" onclick="modal.style.display='none'">&times;</span>
+                    <h2 style="margin-bottom: 20px;">Comece Sua Jornada Fitness!</h2>
+                    <form id="leadForm">
+                        <div class="input-group">
+                            <input type="text" placeholder="Seu nome completo" required>
+                        </div>
+                    
+                        <div class="input-group">
+                            <input type="tel" 
+                                placeholder="(00) 00000-0000" 
+                                pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" 
+                                required>
+                        </div>
+
+                        <button type="submit">
+                            <span class="button-text">Quero meu acesso imediato!</span>
+                            <span class="button-subtext">Planos a partir de R$ 89/mês</span>
+                        </button>
+
+                        <p class="privacy-text">
+                            Seus dados estão protegidos. Ao continuar, você concorda com nossa 
+                            <a href="#">Política de Privacidade</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>

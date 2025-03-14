@@ -1,0 +1,65 @@
+.unique-benefits {
+       padding: 1rem 5rem 7rem;
+       background: var(--secondary-color);
+       color: var(--text-light);
+       text-align: center;
+}
+
+.unique-benefits h2 {
+       margin: 6rem;
+}
+
+.benefits-container {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+       gap: 3rem;
+       max-width: 1200px;
+       margin: 40px auto;
+}
+
+.benefit-item {
+       display: grid;
+       background: rgba(255, 255, 255, 0.1);
+       padding: 1.5rem;
+       border-radius: 15px;
+       transition: transform 0.3s;
+}
+
+.benefit-item:hover {
+       transform: translateY(-10px);
+}
+
+.benefit-icon {
+       margin: 1rem;
+       width: auto;
+       height: 5rem;
+
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: contain;
+       font-size: 2.5rem;
+       margin-bottom: 15px;
+}
+
+.icon-progress {
+       background-image: url("../img/icon/winner.png");
+}
+
+.icon-diet {
+       background-image: url("../img/icon/diet.png");
+}
+
+.icon-app {
+       background-image: url("../img/icon/app.png");
+}
+
+.benefit-item h3 {
+       font-size: 1.5rem;
+       padding: 0.5rem;
+}
+
+.benefit-item p {
+       padding: 0.5rem 1rem 2rem;
+       text-align: center;
+       font-size: 1rem;
+}

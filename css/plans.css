@@ -1,0 +1,51 @@
+
+.plans {
+       padding: 10rem 5em;
+       background-color: var(--secondary-color);
+       color: var(--text-light);
+}
+
+.plans-container {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+       gap: 5rem;
+       max-width: 1200px;
+       margin: 0 auto;
+}
+
+.plans-card {
+       background: #FFFFFF;
+       color: var(--secondary-color);
+       padding: 30px;
+       border-radius: 10px;
+       text-align: center;
+}
+
+.decorate {
+       background-color: var(--primary-color);
+       color: var(--text-light);
+
+}
+
+.dcorete-button {
+       background-color: var(--secondary-color);
+}
+
+.plans-card h3 {
+       font-size: 2rem;
+       margin-bottom: 10px;
+}
+
+.plans-card ul {
+       justify-content: center;
+       list-style: none;
+       padding: 1rem;
+}
+
+.coast {
+       font-size: 2rem;
+}
+
+.testimonials {
+       padding: 50px 20px;
+}
