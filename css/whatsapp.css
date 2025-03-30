@@ -1,0 +1,15 @@
+.whatsapp-float {
+       display: flex;
+       position: fixed;
+       background-color: #25d366; /* Cor verde do WhatsApp */
+       border-radius: 50%;
+       text-align: center;
+       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+       cursor: pointer;
+       z-index: 1000;
+   }
+
+.whatsapp-float {
+       font-size: 2rem;
+}
+  
