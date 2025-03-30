@@ -19,6 +19,11 @@
        padding: 30px;
        border-radius: 10px;
        text-align: center;
+       transition: all 0.3s ease;
+}
+.plans-card:hover {
+       transform: scale(1.1);
+
 }
 
 .decorate {

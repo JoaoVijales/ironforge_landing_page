@@ -41,15 +41,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Ativa link correspondente à seção visível 
+    // function setActiveLink() {
+    //     let index = sections.length;
+
+    //     while (--index && window.scrollY - 50 < sections[index].offsetTop) { }
+
+    //     navLinks.forEach(link => link.classList.remove('active'));
+    //     navLinks[index]?.classList.add('active');
+
+    // }
+
     function setActiveLink() {
-        let index = sections.length;
-
-        while (--index && window.scrollY + 50 < sections[index].offsetTop) { }
-
+        const header = document.querySelector('header');
+        const menu = document.getElementById('menu');
+        const headerHeight = header ? header.offsetHeight : 0;
+        const menuHeight = menu ? menu.offsetHeight : 0;
+        console.log(headerHeight);
+        console.log(menuHeight);
+        const adjustedScroll = window.scrollY + headerHeight*2;
+        let index = sections.length - 1;
+        
+        while (index >=0 && adjustedScroll < sections[index].offsetTop) {
+        
+        index--;
+        
+        }
+        
         navLinks.forEach(link => link.classList.remove('active'));
-        navLinks[index]?.classList.add('active');
-
-    }
+        
+        if (index >= 0) {
+        
+        navLinks[index].classList.add('active');
+        
+        }
+        
+        }
 
     // Ativa na carga inicial
     setActiveLink();
@@ -86,51 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
             setActiveLink();
         }, 400);
     });
+
+    
 });
-
-// Modal
-const modal = document.getElementById('modal');
-
-function openModal() {
-    modal.style.display = 'flex';
-}
-
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
-}
-
-// Form Submission
-document.getElementById('leadForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    // Adicionar integração com API de envio
-    alert('Cadastro realizado! Entraremos em contato.');
-    modal.style.display = 'none';
-});
-// Funções para abrir/fechar o formulário
-function openForm() {
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Bloqueia scroll
-
-}
-
-// WhatsApp
-function openWhatsApp() {
-    window.open('https://wa.me/5511999999999?text=Quero%20saber%20sobre%20os%20planos');
-}
-
-// Scroll Animation
-window.addEventListener('scroll', function () {
-     const elements = document.querySelectorAll('.benefit-item, .plano-item');
-     elements.forEach(element => {
-        const position = element.getBoundingClientRect();
-        if (position.top < window.innerHeight) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }
-    });
- });
 
 // Adicione no script.js
 const gymLocations = [
@@ -170,4 +154,51 @@ function loadGymLocations() {
         grid.appendChild(card);
     });
 }
+
+
+
+// Modal
+const modal = document.getElementById('modal');
+
+function openModal() {
+    modal.style.display = 'flex';
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Form Submission
+document.getElementById('leadForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    // Adicionar integração com API de envio
+    alert('Cadastro realizado! Entraremos em contato.');
+    modal.style.display = 'none';
+});
+// Funções para abrir/fechar o formulário
+function openForm() {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Bloqueia scroll
+
+}
+
+// WhatsApp
+function openWhatsApp() {
+    window.open('https://wa.me/5511999999999?text=Quero%20saber%20sobre%20os%20planos');
+}
+
+// // Scroll Animation
+// window.addEventListener('scroll', function () {
+//      const elements = document.querySelectorAll('.benefit-item, .plano-item');
+//      elements.forEach(element => {
+//         const position = element.getBoundingClientRect();
+//         if (position.top < window.innerHeight) {
+//             element.style.opacity = '1';
+//             element.style.transform = 'translateY(0)';
+//         }
+//     });
+//  });
+
 

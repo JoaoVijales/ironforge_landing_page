@@ -18,15 +18,19 @@
 }
 
 .benefit-item {
-       display: grid;
+       z-index: 0;
+       position: relative;
+       display: block;
        background: rgba(255, 255, 255, 0.1);
        padding: 1.5rem;
        border-radius: 15px;
-       transition: transform 0.3s;
+       transition: transform 0.3s ease;
+       transform: translateZ(0)
 }
 
 .benefit-item:hover {
-       transform: translateY(-10px);
+       transform: scale(1.1);
+       z-index: 1;
 }
 
 .benefit-icon {
@@ -63,3 +67,5 @@
        text-align: center;
        font-size: 1rem;
 }
+
+/*efeito usando hover que aumente o benefit-item especifico que o cursor esta em cima*/

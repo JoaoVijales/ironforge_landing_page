@@ -17,7 +17,7 @@
        border-radius: 15px;
        width: 90%;
        max-width: 500px;
-       position: center;
+       position: relative;
        animation: modalOpen 0.3s ease-out;
 }
 
